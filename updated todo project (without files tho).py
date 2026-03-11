@@ -84,6 +84,8 @@ def remove_tasks(f,bin_tasks):
             if r in range(1, len(f) + 1):
                 keys1=list(f.keys())
                 bin_tasks.append(keys1[r-1])
+                with open('bin.txt','a') as file:
+                    file.write(f'{keys1[r-1]}\n')
                 print(f'{keys1[r-1]} is removed')
                 f.pop(keys1[r-1])            
                 print('Tasks:')
